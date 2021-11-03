@@ -26,6 +26,7 @@ helper_titles = [
 root_path = Path("./solutions")
 helper_path = Path("./helper")
 helper_file_extension = ".cpp"
+notes_file_name = "notes.txt"
 
 def make_directory(path):
     path.mkdir(parents=True, exist_ok=True)
@@ -41,6 +42,7 @@ make_directory(root_path)
 for name in chapter_titles:
     dir_path = root_path / name
     make_directory(dir_path)
+    make_empty_file(dir_path / notes_file_name)
 
 # Helper directories & files (to be populated - to be decided based on required template)
 
